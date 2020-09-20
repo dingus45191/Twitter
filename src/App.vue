@@ -6,12 +6,12 @@
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
         crossorigin="anonymous">
 <!-- side nav bar -->
-   <div class=" w-1/5 border-r border-lighter sm:md:px-2 lg: px-8 py-2 flex flex-col justify-between">
-        <div class="mb-10">
+   <div class=" w-1/5 border-r border-lighter  px-8 py-2 flex flex-col justify-between">
+        <div class="mb-10 ">
            <button class="h-12 w-12 hover:bg-lightblue text-3xl rounded-full text-blue ml-9 mb-2">
            <i class="fab fa-twitter "></i>
            </button>
-            <div class=" ml-8">
+            <div class=" ml-8 ">
              <button v-for="tab in tabs" :key="tab" @click="id = tab.id" :class="`focus:outline-none hover:text-blue flex items-center py-2 px-4 hover:bg-lightblue rounded-full mr-auto mb-3 ${ id === tab.id ? 'text-blue' : ''}`">
                 <i :class="`${ tab.icon } text-2xl mr-4 text-left `"></i>
                 <p class="text-lg font-semibold text-left hidden lg:block"> {{ tab.title }} </p> 
