@@ -63,21 +63,10 @@
        <i class="far fa-star text-xl text-blue"></i>
     </div>
     <div class="px-5 py-3 border-b-8 border-lighter flex">
-      <div >
-        <img src="profile.jpg" class="w-12 h-12 rounded-full"/>
+      <div class="">
+      <img src="profile.jpg" class="w-12 h-12 rounded-full"/>
       </div>
-      <form class="w-full px-4 relative">
-        <textarea placeholder="What's up?" class="pb-3 mt-3 w-full focus:outline-none"></textarea>
-        <div class="flex items-center">
-            <i class="text-lg text-blue mr-4 far fa-image"></i>
-            <i class="text-lg text-blue mr-4 fas fa-film"></i>
-            <i class="text-lg text-blue mr-4 far fa-chart-bar"></i>
-            <i class="text-lg text-blue mr-4 far fa-smile"></i>
-        </div>
-        <button class="h-10 px-4 text-white font-semibold bg-blue hover:bg-darkblue focus:outline-none rounded-full absolute bottom-0 right-0">
-        Tweet
-        </button>
-      </form>
+      <form class="w-full px-4 rela"></form>
     </div>
    </div> 
 

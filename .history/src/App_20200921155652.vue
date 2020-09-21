@@ -67,7 +67,7 @@
         <img src="profile.jpg" class="w-12 h-12 rounded-full"/>
       </div>
       <form class="w-full px-4 relative">
-        <textarea placeholder="What's up?" class="pb-3 mt-3 w-full focus:outline-none"></textarea>
+        <textarea placeholder="What's up?" class="pb-3 mtw-full focus:outline-none"></textarea>
         <div class="flex items-center">
             <i class="text-lg text-blue mr-4 far fa-image"></i>
             <i class="text-lg text-blue mr-4 fas fa-film"></i>
