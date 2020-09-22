@@ -7,7 +7,7 @@
         crossorigin="anonymous">
 <!-- side nav bar -->
    <div class=" lg:w-1/5 border-r border-lighter  sm:px-5 px-8 py-2 flex flex-col justify-between  ">
-        <div class="mb-10 ">
+        <div class="mb-20 ">
            <button class="h-12 w-12 hover:bg-lightblue text-3xl rounded-full text-blue ml-9 mb-2">
            <i class="fab fa-twitter "></i>
            </button>
@@ -17,7 +17,7 @@
                 <p class="text-lg font-semibold text-left hidden lg:block"> {{ tab.title }} </p>
               </button>
             </div>
-            <button class="text-white bg-blue rounded-full font-semibold focus:outline-none w-12 h-12 lg:h-auto lg:w-full p-3 hover:bg-darkblue ml-3 mb-20">
+            <button class="text-white bg-blue rounded-full font-semibold focus:outline-none w-12 h-12 lg:h-auto lg:w-full p-3 hover:bg-darkblue ml-3 mb-10">
             <div class="sm:ml-6">
             <p class="hidden lg:block ">Tweet</p>
             <div class="md:hidden">
@@ -27,7 +27,7 @@
 
             </button>
         </div>
-        <div class="lg:w-full relative">
+        <div class="lg:w-full relative ">
               <button @click="dropdown = true" class="flex items-center hover:bg-lightblue rounded-full w-full focus:outline-none  ">
               <img src="../public/profile.jpg" class="w-10 h-10 rounded-full m-0 "/>
 
@@ -79,6 +79,42 @@
         </button>
       </form>
     </div>
+      <div class="flex flex-col-reverse">
+        <div v-for="tweet in tweets" :key="tweet" class="w-full p-4 border-b hover:bg-lighter flex">
+          <div class="flex-none mr-4">
+            <img src="profile.jpg" class="h-12 w-12 rounded-full flex-none"/>
+          </div>
+          <div class="w-full">
+            <div class="flex items-center w-full">
+              <p class="font-semibold"> Mubashir45191 </p>
+              <p class="text-sm text-dark ml-2"> @Mub45191 </p>
+              <p class="text-sm text-dark ml-2"> 1 sec </p>
+              <i class="fas fa-angle-down text-dark ml-auto"></i>
+            </div>
+            <p class="py-2">
+              {{ tweet.content }}
+            </p>
+            <div class="flex items-center justify-between w-full">
+              <div class="flex items-center text-sm text-dark">
+                <i class="far fa-comment mr-3"></i>
+                <p> 0 </p>
+              </div>
+              <div class="flex items-center text-sm text-dark">
+                <i class="fas fa-retweet mr-3"></i>
+                <p> 0 </p>
+              </div>
+              <div class="flex items-center text-sm text-dark">
+                <i class="fas fa-heart mr-3"></i>
+                <p> 1 </p>
+              </div>
+              <div class="flex items-center text-sm text-dark">
+                <i class="fas fa-share-square mr-3"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <div v-for="follow in following" :key="follow" class="w-full p-4 border-b hover:bg-lighter flex ">
      <div class="flex-none mr-4">
        <img :src="`${follow.src}`" :key="follow.src" class="h-12 w-12 rounded-full flex-none"  alt="image">
@@ -90,6 +126,8 @@
             <p class="text-sm text-dark ml-2">{{follow.time}}</p>
             <i class="fas fa-angle-down text-dark ml-auto"></i>
           </div>
+
+
         <p class="py-2">{{follow.tweet}}</p>
         <div class="flex items-center justify-between w-full">
             <div class="flex items-center text-sm text-dark">
@@ -194,11 +232,16 @@ export default {
         {src: 'trump.jpg', name: 'Donald Trump', handle: '@realDon'}
       ],
          following: [
-           {src: 'obama.jpg', name: 'Barrack Obama', handle: '@bObama', time: '20 min', tweet: `@elMusk you should send @realDon to Mars forever. The guy's destroying America.`, comments: '30,000', retweets: '55000', like: '8,000,003'},
-           {src: 'elon.jpg', name: 'Elon Musk', handle: '@elMusk', time: '55 min', tweet: `Well I can send him for a tour but forever??I'd better not use SpaceX for these stuff.`, comments: '80,030', retweets: '50', like: '20,003'},
+
+
+
+           {src: 'madhav.jpg', name: 'Madhav1004', handle: '@madGuy', time: '15min', tweet: `@bObama you can send @realDon to Mars but the guy will come back to take revenge.`, comments: '15,00', retweets: '17000', like: '30,600'},
+           {src: 'elon.jpg', name: 'Elon Musk', handle: '@elMusk', time: '20min', tweet: `@Mub45191 I'd say choose Macbook. It's awesome.You can do everything with a mac.`, comments: '20,030', retweets: '5000', like: '50,200'},
+           {src: 'trump.jpg', name: 'Donald Trump', handle: '@realDon', time: '55min', tweet: `Well I'm a legend I will settle on Mars if @elMusk succeeds in colonizing it. Stupid of @bObama. @Mub45191 I'd go with mac.`, comments: '100,500', retweets: '1,000,032', like: '5,000,103'},
            {src: 'profile.jpg', name: 'Mubashir45191', handle: '@Mub45191', time: '1.4 hr', tweet: `@elMusk and @realDon which one is the best laptop, Macbook Pro or Dell XPS`, comments: '50,000', retweets: '1,000,002', like: '5,000,003'},
-           {src: 'trump.jpg', name: 'Donald Trump', handle: '@realDon', time: '1.5 hr', tweet: `Well I'm a legend I will settle on Mars if @elMusk succeeds in colonizing it. Stupid of @bObama. @Mub45191 I'd go with mac.`, comments: '100,500', retweets: '1,000,032', like: '5,000,103'},
-           {src: 'elon.jpg', name: 'Elon Musk', handle: '@elMusk', time: '2hr', tweet: `@Mub45191 I'd say choose Macbook. It's awesome.You can do everything with a mac.`, comments: '20,030', retweets: '5000', like: '50,200'}
+           {src: 'elon.jpg', name: 'Elon Musk', handle: '@elMusk', time: '1.5 hr', tweet: `Well I can send him for a tour but forever??I'd better not use SpaceX for these stuff.`, comments: '80,030', retweets: '50', like: '20,003'},
+           {src: 'obama.jpg', name: 'Barrack Obama', handle: '@bObama', time: '2 hr', tweet: `@elMusk you should send @realDon to Mars forever. The guy's destroying America.`, comments: '30,000', retweets: '55000', like: '8,000,003'},
+
          ],
          tweets:[
            {content:'Ok cool, I should get a Mac.'}
